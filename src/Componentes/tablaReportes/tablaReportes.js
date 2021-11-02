@@ -12,6 +12,7 @@ import api_host from '../conf/creds';
 const styles = theme => ({
     root: {
         width: '100%',
+        height:'95vh',
         marginTop: theme.spacing.unit * 3,
         overflowX: 'auto'
     },

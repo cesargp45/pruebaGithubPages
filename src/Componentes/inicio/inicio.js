@@ -190,36 +190,41 @@ const DrawerMenu = () => {
                         </List>
                         
                     </Drawer>
-                    <main className={classes.content} style={{ paddingRight: '18px' }}>
-                        <Route exact path='/ListaReportes'>
-                            <ProcessTable />
-                        </Route>
-                        <Route exact path='/Formulario'>
-                            <Formulario />
-                        </Route>
-                        <Route exact path='/Asistencia'>
-                            <Asistencia />
-                        </Route>
-                        <Route exact path='/listaAsistencia'>
-                            <ProcessTable2 />
-                        </Route>
-                        <Route path='/' exact>
-                            <Redirect to="/ListaReportes" />
-                        </Route>
-                        <Route path='/Inicio' exact>
-                            <Redirect to="/ListaReportes" />
-                        </Route>
-                        <Route path='/Inicioform' exact>
-                            <Redirect to="/Formulario" />
-                        </Route>
-                        <Route path='/InicioAsistencia' exact>
-                            <Redirect to="/Asistencia" />
-                        </Route>
-                        <Route path='/IniciolistaAsistencia' exact>
-                            <Redirect to="/listaAsistencia" />
-                        </Route>
+                    <Router>
+                    <Switch>
+                        <main className={classes.content} style={{ paddingRight: '18px' }}>
+                            <Route exact path='/ListaReportes'>
+                                <ProcessTable />
+                            </Route>
+                            <Route exact path='/Formulario'>
+                                <Formulario />
+                            </Route>
+                            <Route exact path='/Asistencia'>
+                                <Asistencia />
+                            </Route>
+                            <Route exact path='/listaAsistencia'>
+                                <ProcessTable2 />
+                            </Route>
+                            <Route path='/' exact>
+                                <Redirect to="/ListaReportes" />
+                            </Route>
+                            <Route path='/Inicio' exact>
+                                <Redirect to="/ListaReportes" />
+                            </Route>
+                            <Route path='/Inicioform' exact>
+                                <Redirect to="/Formulario" />
+                            </Route>
+                            <Route path='/InicioAsistencia' exact>
+                                <Redirect to="/Asistencia" />
+                            </Route>
+                            <Route path='/IniciolistaAsistencia' exact>
+                                <Redirect to="/listaAsistencia" />
+                            </Route>
+                            </main>
+                        </Switch>
+                        </Router>           
                           
-                    </main>
+                    
                 </BrowserRouter>
             </div >
         </ThemeProvider>
