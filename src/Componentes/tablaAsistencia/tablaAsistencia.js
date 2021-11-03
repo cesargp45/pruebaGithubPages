@@ -116,6 +116,7 @@ const ProcessTable2 = (props) => {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
+                'Content-Security-Policy': 'upgrade-insecure-requests'
             },
         };
         const response = await fetch(`${api_host}/getAsistencias`, requestOptions)
