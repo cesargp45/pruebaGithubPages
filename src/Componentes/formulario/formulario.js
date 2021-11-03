@@ -126,7 +126,9 @@ export default function Formulario() {
       };
    const requestOptions = {
        method: 'POST',
-       headers: { 'Content-Type': 'application/json' },
+       headers: { 'Content-Type': 'application/json',
+                  'Content-Security-Policy': 'upgrade-insecure-requests'
+       },
        body: JSON.stringify(body)
     };
     const response = await fetch(`${api_host}/enviarReporte`, requestOptions)
